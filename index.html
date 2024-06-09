@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Inter font from google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="styles.css" />
+        <title>Naveen - Table</title>
+    </head>
+    <body>
+        <main class="main">
+            <div class="table-container">
+                <div class="scrollable-table">
+                    <table class="table" id="table">
+                        <thead class="table-header">
+                            <tr>
+                                <td id="filter-or-search-td" colspan="5"></td>
+                                <td></td>
+                                <td colspan="2">
+                                    <button id="add-button" class="add-button">
+                                        + Add customer
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <!-- <th>Checkbox</th> -->
+                                <th>
+                                    <input
+                                        class="checkbox"
+                                        type="checkbox"
+                                        name=""
+                                        id="all"
+                                    />
+                                </th>
+                                <th>
+                                    <div class="header-item-container">
+                                        <span>#</span>
+                                        <span
+                                            class="order-icon"
+                                            data-order="id"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                viewBox="0 0 16 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M8.40962 13.4148C8.21057 13.6992 7.78943 13.6992 7.59038 13.4148L5.05071 9.78673C4.81874 9.45534 5.05582 9 5.46033 9H10.5397C10.9442 9 11.1813 9.45534 10.9493 9.78673L8.40962 13.4148Z"
+                                                    fill="#BCC2CE"
+                                                />
+                                                <path
+                                                    d="M8.40962 2.58517C8.21057 2.30081 7.78943 2.30081 7.59038 2.58517L5.05071 6.21327C4.81874 6.54466 5.05582 7 5.46033 7H10.5397C10.9442 7 11.1813 6.54466 10.9493 6.21327L8.40962 2.58517Z"
+                                                    fill="#BCC2CE"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="header-item-container">
+                                        <span> NAME </span>
+                                        <span
+                                            data-order="name"
+                                            class="order-icon"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                viewBox="0 0 16 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M8.40962 13.4148C8.21057 13.6992 7.78943 13.6992 7.59038 13.4148L5.05071 9.78673C4.81874 9.45534 5.05582 9 5.46033 9H10.5397C10.9442 9 11.1813 9.45534 10.9493 9.78673L8.40962 13.4148Z"
+                                                    fill="#BCC2CE"
+                                                />
+                                                <path
+                                                    d="M8.40962 2.58517C8.21057 2.30081 7.78943 2.30081 7.59038 2.58517L5.05071 6.21327C4.81874 6.54466 5.05582 7 5.46033 7H10.5397C10.9442 7 11.1813 6.54466 10.9493 6.21327L8.40962 2.58517Z"
+                                                    fill="#BCC2CE"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="header-item-container">
+                                        <span>DESCRIPTION</span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="header-item-container">
+                                        <span>STATUS</span>
+                                        <span
+                                            data-order="status"
+                                            class="order-icon"
+                                        >
+                                            <svg
+                                                width="16"
+                                                height="16"
+                                                viewBox="0 0 16 16"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M8.40962 13.4148C8.21057 13.6992 7.78943 13.6992 7.59038 13.4148L5.05071 9.78673C4.81874 9.45534 5.05582 9 5.46033 9H10.5397C10.9442 9 11.1813 9.45534 10.9493 9.78673L8.40962 13.4148Z"
+                                                    fill="#BCC2CE"
+                                                />
+                                                <path
+                                                    d="M8.40962 2.58517C8.21057 2.30081 7.78943 2.30081 7.59038 2.58517L5.05071 6.21327C4.81874 6.54466 5.05582 7 5.46033 7H10.5397C10.9442 7 11.1813 6.54466 10.9493 6.21327L8.40962 2.58517Z"
+                                                    fill="#BCC2CE"
+                                                />
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="header-item-container">
+                                        <span>RATE</span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="header-item-container">
+                                        <span> BALANCE </span>
+                                    </div>
+                                </th>
+                                <th>
+                                    <div class="header-item-container">
+                                        <span>DEPOSIT</span>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-body" id="tbody">
+                            <!-- <tr>
+                                <td>0</td>
+                                <td>
+                                    <div class="name-div">
+                                        <span class="name">Sahil</span>
+                                        <span class="p-no">9869789575</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit.
+                                </td>
+                                <td><span class="status due">due</span></td>
+                                <td>
+                                    <div class="rate-div">
+                                        <span>$85.00</span>
+                                        <span class="currency">CAD</span>
+                                    </div>
+                                </td>
+                                <td>$85.00</td>
+                                <td>$85.00</td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-footer">
+                    <div>
+                        <span id="items-showing"></span>
+                    </div>
+
+                    <div class="pagination-div">
+                        <div class="rows-per-page" id="total">
+                            <span>Rows Per Page</span>
+                            <select
+                                class="rows-per-page-select"
+                                onchange="changePerPage(this.value)"
+                            >
+                                <option>10</option>
+                                <option>5</option>
+                                <option>15</option>
+                                <option>20</option>
+                                <option>30</option>
+                                <option>40</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+                        <div class="page">
+                            <button class="previous" id="previous">
+                                <svg
+                                    width="6"
+                                    height="8"
+                                    viewBox="0 0 6 8"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M4.5 7L1.5 4L4.5 1"
+                                        stroke="#868FA0"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                            <span id="current-page"></span>
+                            <button class="next" id="next">
+                                <svg
+                                    width="6"
+                                    height="8"
+                                    viewBox="0 0 6 8"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M4.5 7L1.5 4L4.5 1"
+                                        stroke="#868FA0"
+                                        stroke-width="1.5"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="close" class="close">&times;</span>
+                    <h2>Add Customer</h2>
+                    <form class="form" id="customer-form">
+                        <div class="label-input-container">
+                            <label for="name">Name:</label>
+                            <input
+                                class="input-style"
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                            />
+                        </div>
+
+                        <div class="label-input-container">
+                            <label for="description">Description:</label>
+                            <textarea
+                                class="input-style"
+                                name=""
+                                maxlength="60"
+                                id="description"
+                                name="description"
+                            ></textarea>
+                        </div>
+
+                        <div class="label-input-container">
+                            <label for="status">Status:</label>
+                            <select
+                                class="input-style"
+                                id="status"
+                                name="status"
+                                required
+                            >
+                                <option value="open">Open</option>
+                                <option value="paid">Paid</option>
+                                <option value="due">Due</option>
+                                <option value="inactive">Inactive</option>
+                            </select>
+                        </div>
+
+                        <div class="label-input-container">
+                            <label for="rate">Rate:</label>
+                            <input
+                                class="input-style"
+                                type="text"
+                                id="rate"
+                                name="rate"
+                                required
+                            />
+                        </div>
+
+                        <div class="label-input-container">
+                            <label for="currency">Currency:</label>
+                            <input
+                                class="input-style"
+                                type="text"
+                                id="currency"
+                                name="currency"
+                                required
+                            />
+                        </div>
+
+                        <div class="label-input-container">
+                            <label for="balance">Balance:</label>
+                            <input
+                                class="input-style"
+                                type="text"
+                                id="balance"
+                                name="balance"
+                                required
+                            />
+                        </div>
+
+                        <div class="label-input-container">
+                            <label for="phoneNumber">Phone Number:</label>
+                            <input
+                                class="input-style"
+                                type="tel"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                required
+                            />
+                        </div>
+
+                        <div class="label-input-container">
+                            <label for="deposit">Deposit:</label>
+                            <input
+                                class="input-style"
+                                type="text"
+                                id="deposit"
+                                name="deposit"
+                                required
+                            />
+                        </div>
+                        <button class="add-button" type="submit">
+                            Add Customer
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <!-- Script file -->
+        <script src="data.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
