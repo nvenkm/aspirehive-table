@@ -415,3 +415,17 @@ input[type="checkbox"]:checked:after {
 .label-input-container label {
     width: 140px;
 }
+
+@media (max-width: 1000px) {
+    .table-container {
+        max-width: 90vw;
+    }
+
+    .table-footer {
+        max-width: 90vw;
+    }
+
+    .scrollable-table {
+        overflow-x: auto;
+    }
+}
